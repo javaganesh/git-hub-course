@@ -1,0 +1,32 @@
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Amazon</title>
+    
+    </head>
+
+    <body>
+        <p>Amazon shipping calculator</p>
+        <input placeholder="cost of order" id="cost-input"/>
+        <button onclick="calculator()" onkeydown="
+        
+        ">Calculate</button>
+        <p class="js-total-cost"></p>
+
+        <script>
+            function calevet(){
+                console.log(event.key);
+        if(event.key='enter'){
+            calculator();
+        }
+            }
+            function calculator() {
+                let cost = parseFloat(document.getElementById('cost-input').value);
+                if (cost < 40) {
+                    cost = cost + 10;
+                }
+                document.querySelector('.js-total-cost').innerHTML = '$' + cost.toFixed(2);
+            }
+        </script>
+    </body>
+    </html>
